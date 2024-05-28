@@ -10,9 +10,9 @@ if len(sys.argv) == 3:
     else:
         os.mkdir(path=path_)
         with open(file=os.path.join(path_, "main.py"), mode="w") as file:
-            file.write("def solution():\n    ...")
+            file.write("# Shine On  You Crazy Diamond")
         with open(file=os.path.join(path_, "main_test.py"), mode="w") as file:
-            file.write("from main import solution\n\n")
-            file.write("def test_solution():\n    ...")
+            file.write("# Test Here")
+
         with open(file=os.path.join(path_, "README.md"), mode="w") as file:
             file.write(f"# {id}. {title}")
