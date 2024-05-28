@@ -1,9 +1,21 @@
 import sys 
 import os 
 
-if len(sys.argv) == 3:
+import requests
+from bs4 import BeautifulSoup
+
+
+def fetch_title(id):
+    url = f"https://projecteuler.net/problem={id}"
+    response = requests.get(url=url)
+    if response.ok:
+        soup = BeautifulSoup(response.content, "html.parser")
+        title = soup.h2.get_text(strip=True)
+        return title
+
+if len(sys.argv) == 2:
     id = sys.argv[1]
-    title = sys.argv[2]
+    title = fetch_title(id)
     path_ = f".\\problems\\problem_{id}"    
     if os.path.exists(path=path_):
         print('Não foi possível criar esse diretório, pois já existe')
