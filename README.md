@@ -26,7 +26,7 @@ pip install -r requirements.txt
 Clone the repository to your local machine:
 
 ```
-git clone http://github.com/LuanOliveira88/project-euler.git
+git clone https://github.com/LuanOliveira88/project-euler.git
 cd project-euler
 ```
 
@@ -65,3 +65,4 @@ project-euler/
 ## Contact
 
 If you have any questions or suggestions, feel free to contact me at olivrluan@gmail.com or, alternatively, you can open an issue in this repository to discuss any problems or suggestions.
+
